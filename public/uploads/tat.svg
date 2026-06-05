@@ -1,0 +1,12 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520">
+  <rect width="900" height="520" fill="#0f172a"/>
+  <rect x="145" y="80" width="610" height="350" rx="30" fill="#f8fafc" opacity=".08" stroke="#38bdf8" stroke-width="5"/>
+  <rect x="205" y="135" width="220" height="245" rx="20" fill="#1e293b"/>
+  <rect x="475" y="135" width="220" height="245" rx="20" fill="#1e293b"/>
+  <circle cx="315" cy="205" r="45" fill="#94a3b8"/>
+  <path d="M245 340 Q315 260 385 340" fill="none" stroke="#e2e8f0" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="585" cy="205" r="45" fill="#38bdf8"/>
+  <path d="M515 340 Q585 265 655 340" fill="none" stroke="#e2e8f0" stroke-width="12" stroke-linecap="round"/>
+  <text x="70" y="455" fill="#f8fafc" font-size="40" font-family="Arial" font-weight="700">Apercepción temática</text>
+  <text x="70" y="490" fill="#94a3b8" font-size="22" font-family="Arial">Historias a partir de escenas ambiguas</text>
+</svg>

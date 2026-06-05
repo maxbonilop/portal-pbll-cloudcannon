@@ -1,17 +1,712 @@
 ---
+import home from "../data/home.json";
 
+function getYoutubeEmbed(url) {
+  if (!url) return "";
+
+  if (url.includes("/embed/")) {
+    return url;
+  }
+
+  if (url.includes("youtu.be/")) {
+    const id = url.split("youtu.be/")[1]?.split("?")[0];
+    return `https://www.youtube.com/embed/${id}`;
+  }
+
+  if (url.includes("watch?v=")) {
+    const id = url.split("watch?v=")[1]?.split("&")[0];
+    return `https://www.youtube.com/embed/${id}`;
+  }
+
+  if (url.includes("/shorts/")) {
+    const id = url.split("/shorts/")[1]?.split("?")[0];
+    return `https://www.youtube.com/embed/${id}`;
+  }
+
+  return url;
+}
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{home.sitio.titulo}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body id="inicio">
+    <header class="navbar">
+      <a href="#inicio" class="logo">☂ PBLL</a>
+      <nav>
+        <a href="#proyectivos">Test proyectivos</a>
+        <a href="#historia">Historia</a>
+        <a href="#objetivo">Objetivo</a>
+        <a href="#aplicacion">Aplicación</a>
+        <a href="#interpretacion">Interpretación</a>
+        <a href="#videos">Videos</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-text">
+          <p class="tag">{home.sitio.etiqueta}</p>
+          <h1>{home.sitio.titulo}</h1>
+          <p class="subtitle">{home.sitio.subtitulo}</p>
+          <p class="description">{home.sitio.descripcion}</p>
+
+          <div class="buttons">
+            <a href="#uso" class="btn primary">{home.sitio.botonPrincipal}</a>
+            <a href="#aplicacion" class="btn secondary">{home.sitio.botonSecundario}</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <img src={home.sitio.imagenPrincipal} alt={home.sitio.titulo} />
+        </div>
+      </section>
+
+      <section class="stats">
+        {home.estadisticas.map((item) => (
+          <article>
+            <strong>{item.numero}</strong>
+            <span>{item.texto}</span>
+          </article>
+        ))}
+      </section>
+
+      <section id="uso" class="section">
+        <p class="tag">Guía rápida</p>
+        <h2>Cómo usar este portal</h2>
+
+        <div class="cards three">
+          {home.usoPortal.map((item) => (
+            <article class="card">
+              <h3>{item.titulo}</h3>
+              <p>{item.texto}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section id="proyectivos" class="section split">
+        <div>
+          <p class="tag">Psicología proyectiva</p>
+          <h2>{home.testProyectivos.titulo}</h2>
+          <p class="big-text">{home.testProyectivos.texto}</p>
+          <p class="citation">{home.testProyectivos.cita}</p>
+        </div>
+
+        <aside class="notice">
+          <h3>Importante</h3>
+          <p>{home.testProyectivos.alerta}</p>
+        </aside>
+      </section>
+
+      <section class="section">
+        <p class="tag">Ejemplos</p>
+        <h2>Otros test proyectivos</h2>
+
+        <div class="examples">
+          {home.ejemplos.map((item) => (
+            <article class="example-card">
+              <img src={item.imagen} alt={item.nombre} />
+              <div>
+                <span>{item.anio}</span>
+                <h3>{item.nombre}</h3>
+                <p>{item.descripcion}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section id="historia" class="section">
+        <p class="tag">Historia del instrumento</p>
+        <h2>Línea de tiempo interactiva</h2>
+        <p class="section-intro">Haz clic en cada año para ver más información.</p>
+
+        <div class="timeline-buttons">
+          {home.historia.map((item, index) => (
+            <button class="timeline-btn" data-index={index}>
+              {item.anio}
+            </button>
+          ))}
+        </div>
+
+        <div class="timeline-content">
+          {home.historia.map((item, index) => (
+            <article class={`timeline-panel ${index === 0 ? "active" : ""}`} data-panel={index}>
+              <p class="year">{item.anio}</p>
+              <p class="author">{item.autor}</p>
+              <h3>{item.titulo}</h3>
+              <p>{item.descripcion}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section id="objetivo" class="section">
+        <p class="tag">Características principales</p>
+        <h2>Objetivo, población y composición</h2>
+
+        <div class="cards four">
+          {home.objetivo.map((item) => (
+            <article class="card clickable">
+              <h3>{item.titulo}</h3>
+              <p>{item.texto}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section id="aplicacion" class="section">
+        <p class="tag">Protocolo</p>
+        <h2>Aplicación paso a paso</h2>
+
+        <div class="consigna">
+          <span>Consigna</span>
+          <h3>“{home.aplicacion.consigna}”</h3>
+          <p>{home.aplicacion.nota}</p>
+        </div>
+
+        <div class="steps">
+          {home.aplicacion.pasos.map((paso) => (
+            <article class="step">
+              <span>{paso.numero}</span>
+              <div>
+                <h3>{paso.titulo}</h3>
+                <p>{paso.texto}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section id="interpretacion" class="section">
+        <p class="tag">Análisis interactivo</p>
+        <h2>Interpretación general</h2>
+        <p class="section-intro">Haz clic en cada botón para ampliar la información.</p>
+
+        <div class="accordion">
+          {home.interpretacion.map((item) => (
+            <article class="accordion-item">
+              <button class="accordion-title">
+                <span>{item.titulo}</span>
+                <strong>+</strong>
+              </button>
+              <div class="accordion-content">
+                <p>{item.texto}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section id="videos" class="section">
+        <p class="tag">Recursos audiovisuales</p>
+        <h2>Videos relacionados</h2>
+
+        <div class="video-grid">
+          {home.videos.map((video) => (
+            <article class="video-card">
+              <iframe
+                src={getYoutubeEmbed(video.videoUrl)}
+                title={video.titulo}
+                allowfullscreen>
+              </iframe>
+              <h3>{video.titulo}</h3>
+              <p>{video.descripcion}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="section final">
+        <p class="tag">Cierre</p>
+        <h2>{home.cierre.titulo}</h2>
+        <p>{home.cierre.texto}</p>
+        <a href="#inicio" class="btn primary">{home.cierre.boton}</a>
+      </section>
+    </main>
+
+    <script>
+      const timelineButtons = document.querySelectorAll(".timeline-btn");
+      const timelinePanels = document.querySelectorAll(".timeline-panel");
+
+      timelineButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const index = button.getAttribute("data-index");
+
+          timelineButtons.forEach((btn) => btn.classList.remove("active"));
+          timelinePanels.forEach((panel) => panel.classList.remove("active"));
+
+          button.classList.add("active");
+          document.querySelector(`[data-panel="${index}"]`)?.classList.add("active");
+        });
+      });
+
+      const firstTimelineButton = document.querySelector(".timeline-btn");
+      firstTimelineButton?.classList.add("active");
+
+      const accordionButtons = document.querySelectorAll(".accordion-title");
+
+      accordionButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const item = button.parentElement;
+          item?.classList.toggle("open");
+        });
+      });
+    </script>
+  </body>
 </html>
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background:
+      radial-gradient(circle at top left, rgba(56, 189, 248, 0.22), transparent 30%),
+      radial-gradient(circle at top right, rgba(99, 102, 241, 0.18), transparent 30%),
+      linear-gradient(135deg, #020617, #0f172a);
+    color: #f8fafc;
+  }
+
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 5%;
+    background: rgba(2, 6, 23, 0.8);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .logo {
+    color: #f8fafc;
+    text-decoration: none;
+    font-weight: 800;
+    letter-spacing: 1px;
+  }
+
+  nav {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+
+  nav a:hover {
+    color: #38bdf8;
+  }
+
+  main {
+    width: min(1120px, 92%);
+    margin: auto;
+  }
+
+  .hero {
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 48px;
+    padding: 60px 0;
+  }
+
+  .tag {
+    color: #7dd3fc;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+
+  h1 {
+    font-size: clamp(2.8rem, 7vw, 6rem);
+    line-height: 0.95;
+    margin: 0 0 24px;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    line-height: 1.05;
+    margin: 0 0 22px;
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+
+  p {
+    color: #cbd5e1;
+    line-height: 1.7;
+  }
+
+  .subtitle {
+    font-size: 1.35rem;
+    color: #e2e8f0;
+  }
+
+  .description,
+  .big-text {
+    font-size: 1.06rem;
+    color: #aab6ca;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 28px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 14px 22px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 800;
+  }
+
+  .primary {
+    background: #38bdf8;
+    color: #020617;
+  }
+
+  .secondary {
+    color: #f8fafc;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  .hero-card img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    border-radius: 34px;
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.45);
+    display: block;
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 80px;
+  }
+
+  .stats article,
+  .card,
+  .notice,
+  .consigna,
+  .timeline-panel,
+  .step,
+  .accordion-item,
+  .video-card,
+  .example-card {
+    background: rgba(255, 255, 255, 0.075);
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    border-radius: 24px;
+    backdrop-filter: blur(14px);
+  }
+
+  .stats article {
+    padding: 24px;
+    text-align: center;
+  }
+
+  .stats strong {
+    display: block;
+    color: #38bdf8;
+    font-size: 2.3rem;
+  }
+
+  .stats span {
+    color: #cbd5e1;
+  }
+
+  .section {
+    padding: 88px 0;
+  }
+
+  .section-intro {
+    margin-top: -12px;
+    margin-bottom: 28px;
+  }
+
+  .cards {
+    display: grid;
+    gap: 22px;
+  }
+
+  .three {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .four {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .card {
+    padding: 26px;
+    transition: 0.25s ease;
+  }
+
+  .clickable:hover,
+  .card:hover,
+  .example-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(56, 189, 248, 0.5);
+  }
+
+  .split {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 28px;
+    align-items: center;
+  }
+
+  .citation {
+    color: #38bdf8;
+    font-weight: bold;
+  }
+
+  .notice {
+    padding: 28px;
+    border-left: 5px solid #38bdf8;
+  }
+
+  .examples {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+
+  .example-card {
+    overflow: hidden;
+    transition: 0.25s ease;
+  }
+
+  .example-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+    background: #0f172a;
+  }
+
+  .example-card div {
+    padding: 22px;
+  }
+
+  .example-card span {
+    color: #38bdf8;
+    font-weight: bold;
+  }
+
+  .timeline-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+  }
+
+  .timeline-btn {
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    background: rgba(255, 255, 255, 0.07);
+    color: #f8fafc;
+    padding: 12px 16px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .timeline-btn.active,
+  .timeline-btn:hover {
+    background: #38bdf8;
+    color: #020617;
+  }
+
+  .timeline-panel {
+    display: none;
+    padding: 30px;
+    border-left: 6px solid #38bdf8;
+  }
+
+  .timeline-panel.active {
+    display: block;
+  }
+
+  .year,
+  .author {
+    color: #38bdf8;
+    font-weight: bold;
+    margin: 0 0 8px;
+  }
+
+  .consigna {
+    padding: 30px;
+    margin-bottom: 28px;
+  }
+
+  .consigna span {
+    color: #38bdf8;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+  }
+
+  .consigna h3 {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    margin: 12px 0;
+  }
+
+  .steps {
+    display: grid;
+    gap: 18px;
+  }
+
+  .step {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 18px;
+    padding: 24px;
+    align-items: start;
+  }
+
+  .step span {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    background: #38bdf8;
+    color: #020617;
+    border-radius: 50%;
+    font-weight: 900;
+  }
+
+  .accordion {
+    display: grid;
+    gap: 16px;
+  }
+
+  .accordion-title {
+    width: 100%;
+    padding: 22px;
+    color: #f8fafc;
+    background: transparent;
+    border: 0;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .accordion-content {
+    display: none;
+    padding: 0 22px 22px;
+  }
+
+  .accordion-item.open .accordion-content {
+    display: block;
+  }
+
+  .accordion-item.open strong {
+    transform: rotate(45deg);
+  }
+
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .video-card {
+    overflow: hidden;
+  }
+
+  iframe {
+    width: 100%;
+    height: 320px;
+    border: 0;
+    display: block;
+  }
+
+  .video-card h3,
+  .video-card p {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .video-card p {
+    padding-bottom: 22px;
+  }
+
+  .final {
+    text-align: center;
+    padding-bottom: 120px;
+  }
+
+  .final p {
+    max-width: 760px;
+    margin: 0 auto 28px;
+  }
+
+  @media (max-width: 900px) {
+    .navbar {
+      align-items: flex-start;
+      gap: 12px;
+      flex-direction: column;
+    }
+
+    nav {
+      justify-content: flex-start;
+    }
+
+    .hero,
+    .split {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-card img {
+      height: 360px;
+    }
+
+    .stats,
+    .three,
+    .four,
+    .examples,
+    .video-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .step {
+      grid-template-columns: 1fr;
+    }
+
+    iframe {
+      height: 240px;
+    }
+  }
+</style>

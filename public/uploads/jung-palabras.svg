@@ -1,0 +1,15 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520">
+  <rect width="900" height="520" fill="#0f172a"/>
+  <rect x="130" y="95" width="250" height="120" rx="25" fill="#1e293b" stroke="#38bdf8" stroke-width="4"/>
+  <rect x="520" y="95" width="250" height="120" rx="25" fill="#1e293b" stroke="#38bdf8" stroke-width="4"/>
+  <rect x="325" y="280" width="250" height="120" rx="25" fill="#1e293b" stroke="#38bdf8" stroke-width="4"/>
+  <text x="205" y="168" fill="#f8fafc" font-size="34" font-family="Arial" font-weight="700">Casa</text>
+  <text x="590" y="168" fill="#f8fafc" font-size="34" font-family="Arial" font-weight="700">Madre</text>
+  <text x="390" y="353" fill="#f8fafc" font-size="34" font-family="Arial" font-weight="700">Sueño</text>
+  <path d="M380 155 C440 155 470 155 520 155" stroke="#94a3b8" stroke-width="8" stroke-linecap="round" stroke-dasharray="12 16"/>
+  <path d="M255 215 C285 275 320 305 355 320" stroke="#94a3b8" stroke-width="8" stroke-linecap="round" stroke-dasharray="12 16"/>
+  <path d="M640 215 C610 275 575 305 540 320" stroke="#94a3b8" stroke-width="8" stroke-linecap="round" stroke-dasharray="12 16"/>
+  <circle cx="450" cy="245" r="38" fill="#38bdf8"/>
+  <text x="70" y="455" fill="#f8fafc" font-size="40" font-family="Arial" font-weight="700">Asociación de palabras</text>
+  <text x="70" y="490" fill="#94a3b8" font-size="22" font-family="Arial">Respuestas espontáneas ante palabras estímulo</text>
+</svg>

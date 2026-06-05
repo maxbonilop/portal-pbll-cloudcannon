@@ -1,0 +1,16 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520">
+  <rect width="900" height="520" fill="#111827"/>
+  <circle cx="700" cy="120" r="100" fill="#38bdf8" opacity=".12"/>
+  <ellipse cx="435" cy="285" rx="210" ry="120" fill="#e2e8f0"/>
+  <circle cx="610" cy="250" r="78" fill="#e2e8f0"/>
+  <circle cx="635" cy="255" r="14" fill="#0f172a"/>
+  <ellipse cx="675" cy="275" rx="32" ry="24" fill="#94a3b8"/>
+  <circle cx="665" cy="275" r="5" fill="#0f172a"/>
+  <circle cx="685" cy="275" r="5" fill="#0f172a"/>
+  <path d="M560 185 L595 120 L620 195" fill="#e2e8f0"/>
+  <path d="M340 385 L320 455" stroke="#e2e8f0" stroke-width="22" stroke-linecap="round"/>
+  <path d="M460 390 L470 455" stroke="#e2e8f0" stroke-width="22" stroke-linecap="round"/>
+  <path d="M265 260 Q190 240 210 180" fill="none" stroke="#e2e8f0" stroke-width="18" stroke-linecap="round"/>
+  <text x="70" y="455" fill="#f8fafc" font-size="42" font-family="Arial" font-weight="700">Pata Negra</text>
+  <text x="70" y="490" fill="#94a3b8" font-size="22" font-family="Arial">Técnica proyectiva infantil con láminas narrativas</text>
+</svg>

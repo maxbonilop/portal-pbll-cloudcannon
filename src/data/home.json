@@ -1,0 +1,208 @@
+{
+  "sitio": {
+    "titulo": "Test de la Persona Bajo la Lluvia",
+    "subtitulo": "Psicodiagnóstico con técnicas proyectivas",
+    "descripcion": "Portal académico interactivo sobre el Test de la Persona Bajo la Lluvia. Resume los aspectos clave del instrumento, su historia, objetivo, aplicación e interpretación general. No reemplaza la lectura de manuales oficiales ni la formación profesional especializada.",
+    "etiqueta": "Portafolio digital",
+    "botonPrincipal": "Explorar portal",
+    "botonSecundario": "Ver aplicación",
+    "imagenPrincipal": "/uploads/persona-lluvia.svg"
+  },
+  "estadisticas": [
+    {
+      "numero": "1924",
+      "texto": "Primer antecedente histórico"
+    },
+    {
+      "numero": "7",
+      "texto": "Hitos principales"
+    },
+    {
+      "numero": "300",
+      "texto": "Personas en validación preliminar"
+    }
+  ],
+  "usoPortal": [
+    {
+      "titulo": "Explora",
+      "texto": "Recorre las secciones principales para comprender el test de forma ordenada."
+    },
+    {
+      "titulo": "Interactúa",
+      "texto": "Haz clic en botones, tarjetas y acordeones para ampliar la información."
+    },
+    {
+      "titulo": "Complementa",
+      "texto": "Usa este portal como guía de estudio, no como reemplazo del manual oficial."
+    }
+  ],
+  "testProyectivos": {
+    "titulo": "¿Qué son los test proyectivos?",
+    "texto": "Los test proyectivos son instrumentos de evaluación psicológica que utilizan estímulos ambiguos para explorar la personalidad, los estados emocionales y los conflictos internos del evaluado. No tienen respuestas correctas o incorrectas; la persona proyecta aspectos de su mundo interno en sus respuestas.",
+    "cita": "Frank (1939) y Celener (2006)",
+    "alerta": "La interpretación de estos instrumentos debe realizarse de forma contextual e integrada, nunca a partir de indicadores aislados."
+  },
+  "ejemplos": [
+    {
+      "nombre": "Test de Rorschach",
+      "anio": "1921",
+      "descripcion": "Utiliza manchas de tinta simétricas para explorar la percepción, el pensamiento y aspectos de la personalidad.",
+      "imagen": "/uploads/rorschach.svg"
+    },
+    {
+      "nombre": "Test de Apercepción Temática",
+      "anio": "1935",
+      "descripcion": "Presenta escenas ambiguas para que el evaluado construya historias que expresan motivaciones, conflictos o necesidades.",
+      "imagen": "/uploads/tat.svg"
+    },
+    {
+      "nombre": "Test Pata Negra",
+      "anio": "1952",
+      "descripcion": "Técnica proyectiva infantil que utiliza láminas con animales para explorar vivencias afectivas y familiares.",
+      "imagen": "/uploads/pata-negra.svg"
+    },
+    {
+      "nombre": "Asociación de Palabras de Jung",
+      "anio": "1910",
+      "descripcion": "Presenta palabras estímulo para observar respuestas espontáneas, tiempos de reacción y posibles complejos emocionales.",
+      "imagen": "/uploads/jung-palabras.svg"
+    }
+  ],
+  "historia": [
+    {
+      "anio": "1924",
+      "autor": "H. M. Fay",
+      "titulo": "Primer antecedente",
+      "descripcion": "Elabora y aplica una consigna relacionada con una mujer que pasea por la calle mientras llueve. Evaluaba la persona, el movimiento, el ambiente, la lluvia y la protección."
+    },
+    {
+      "anio": "1947",
+      "autor": "A. Rey",
+      "titulo": "Nuevo método de evaluación",
+      "descripcion": "Propone considerar todos los detalles presentes en el dibujo. Su propuesta recibió críticas y el test dejó de usarse ampliamente durante un tiempo."
+    },
+    {
+      "anio": "Décadas posteriores",
+      "autor": "Transmisión oral",
+      "titulo": "Difusión del test",
+      "descripcion": "El Test de la Persona Bajo la Lluvia se difunde principalmente por transmisión oral. No existe certeza absoluta sobre su autor original."
+    },
+    {
+      "anio": "Años 1980",
+      "autor": "Silvia M. Querol",
+      "titulo": "Investigación en Argentina",
+      "descripcion": "Querol comienza a administrar el test en un colegio secundario de Ramos Mejía y desarrolla una investigación propia ante la escasa bibliografía disponible."
+    },
+    {
+      "anio": "Años 1980–2000",
+      "autor": "Querol y Chaves Paz",
+      "titulo": "Sistematización",
+      "descripcion": "Unifican investigaciones realizadas en ámbitos educativos, clínicos y de selección de personal. Comparan resultados con otros aportes teóricos para estudiar su validez y confiabilidad."
+    },
+    {
+      "anio": "2005",
+      "autor": "Querol y Chaves Paz",
+      "titulo": "Publicación del manual",
+      "descripcion": "Se publica Test de la Persona Bajo la Lluvia: Adaptación y Aplicación. La obra sistematiza la administración, interpretación y aplicaciones del test."
+    },
+    {
+      "anio": "2005",
+      "autor": "Validación preliminar",
+      "titulo": "Muestra de 300 personas",
+      "descripcion": "Las autoras realizan una validación preliminar con una muestra de 300 personas entre 8 y 40 años de Capital y Gran Buenos Aires."
+    }
+  ],
+  "objetivo": [
+    {
+      "titulo": "Objetivo",
+      "texto": "Evaluar cómo el sujeto enfrenta situaciones de presión, estrés o adversidad, y qué recursos psicológicos utiliza para afrontarlas."
+    },
+    {
+      "titulo": "Población",
+      "texto": "Puede aplicarse a niños, adolescentes y adultos. El análisis debe adaptarse según la edad y el nivel de desarrollo del evaluado."
+    },
+    {
+      "titulo": "Composición",
+      "texto": "Consta de una sola consigna gráfica: se pide dibujar una persona bajo la lluvia. Se analizan la figura humana, la lluvia, el paraguas y otros elementos del entorno."
+    },
+    {
+      "titulo": "Qué detecta",
+      "texto": "Puede explorar ansiedad, tolerancia al estrés, recursos defensivos, autoconcepto, imagen corporal, estado emocional y mecanismos de afrontamiento."
+    }
+  ],
+  "aplicacion": {
+    "consigna": "Dibuje una persona bajo la lluvia",
+    "nota": "Se entrega una hoja blanca tamaño A4 en posición vertical y un lápiz. No se dan más indicaciones; si el evaluado pregunta, se responde: Como usted prefiera.",
+    "pasos": [
+      {
+        "numero": "1",
+        "titulo": "Preparar el ambiente",
+        "texto": "Sentar al evaluado en un ambiente tranquilo, cómodo y libre de distracciones."
+      },
+      {
+        "numero": "2",
+        "titulo": "Entregar materiales",
+        "texto": "Dar una hoja blanca A4 en posición vertical y un lápiz."
+      },
+      {
+        "numero": "3",
+        "titulo": "Leer la consigna",
+        "texto": "Leer la consigna de forma clara y neutra: Dibuje una persona bajo la lluvia."
+      },
+      {
+        "numero": "4",
+        "titulo": "Registrar el tiempo",
+        "texto": "No establecer límite de tiempo, pero anotar cuánto tarda el evaluado en terminar."
+      },
+      {
+        "numero": "5",
+        "titulo": "Observar conductas",
+        "texto": "Registrar borrones, dudas, orden del trazado, comentarios espontáneos y otras conductas relevantes."
+      },
+      {
+        "numero": "6",
+        "titulo": "Encuesta post-test",
+        "texto": "Preguntar datos sobre el personaje dibujado: edad, sexo, nombre, qué hace y cómo se siente."
+      }
+    ]
+  },
+  "interpretacion": [
+    {
+      "titulo": "Figura humana",
+      "texto": "Se observa el tamaño, ubicación, postura, expresión y completitud de la figura. Puede orientar sobre autoconcepto, imagen corporal y estado emocional."
+    },
+    {
+      "titulo": "Lluvia",
+      "texto": "Representa simbólicamente una situación de presión o estrés. Se analiza su intensidad, dirección, distribución y relación con la figura."
+    },
+    {
+      "titulo": "Paraguas o protección",
+      "texto": "Los elementos de protección pueden relacionarse con recursos de afrontamiento o defensas frente al ambiente."
+    },
+    {
+      "titulo": "Trazos y borraduras",
+      "texto": "La presión del trazo, los retoques y las borraduras pueden aportar información sobre tensión, inseguridad o control."
+    },
+    {
+      "titulo": "Análisis global",
+      "texto": "Ningún indicador debe interpretarse de forma aislada. El dibujo debe analizarse junto con la conducta observada y la encuesta posterior."
+    }
+  ],
+  "videos": [
+    {
+      "titulo": "Test de la Persona Bajo la Lluvia: teoría y caso práctico",
+      "descripcion": "Video introductorio para complementar el contenido del portal.",
+      "videoUrl": "https://www.youtube.com/watch?v=kd9Em3-X0dQ"
+    },
+    {
+      "titulo": "Interpretación del Test de la Persona Bajo la Lluvia",
+      "descripcion": "Material audiovisual relacionado con criterios generales de interpretación.",
+      "videoUrl": "https://www.youtube.com/watch?v=uENHD-O_s5o"
+    }
+  ],
+  "cierre": {
+    "titulo": "Uso académico y responsable",
+    "texto": "Este portal es una guía de estudio y orientación académica. No sustituye la lectura íntegra de manuales oficiales, la supervisión especializada ni la formación profesional en psicodiagnóstico.",
+    "boton": "Volver al inicio"
+  }
+}

@@ -1,0 +1,164 @@
+source: /
+
+collection_groups:
+  - heading: Portal editable
+    collections:
+      - contenido
+
+collections_config:
+  contenido:
+    path: src/data
+    glob:
+      - "*.json"
+    name: Contenido del portal
+    icon: edit
+    disable_add: true
+    disable_add_folder: true
+    _enabled_editors:
+      - data
+    paths:
+      uploads: /uploads/
+      static: /
+
+_inputs:
+  sitio:
+    type: object
+    label: Inicio de la página
+    comment: Edita el título principal, subtítulo, descripción, botones e imagen principal.
+
+  estadisticas:
+    type: array
+    label: Estadísticas del inicio
+    comment: Edita los números destacados debajo del inicio.
+
+  usoPortal:
+    type: array
+    label: Tarjetas de uso del portal
+    comment: Edita las tarjetas de guía rápida.
+
+  testProyectivos:
+    type: object
+    label: Sección de test proyectivos
+    comment: Edita la definición, cita y aviso importante.
+
+  ejemplos:
+    type: array
+    label: Otros test proyectivos
+    comment: Edita los ejemplos, años, descripciones e imágenes.
+
+  historia:
+    type: array
+    label: Línea de tiempo
+    comment: Edita los años, autores, títulos y descripciones de la historia.
+
+  objetivo:
+    type: array
+    label: Objetivo, población y composición
+    comment: Edita las tarjetas principales del test.
+
+  aplicacion:
+    type: object
+    label: Aplicación del test
+    comment: Edita la consigna, nota y pasos de aplicación.
+
+  interpretacion:
+    type: array
+    label: Interpretación general
+    comment: Edita los botones desplegables de interpretación.
+
+  videos:
+    type: array
+    label: Videos relacionados
+    comment: Edita los títulos, descripciones y links de YouTube.
+
+  cierre:
+    type: object
+    label: Cierre de la página
+    comment: Edita el mensaje final y el botón de regreso.
+
+  titulo:
+    type: text
+    label: Título
+
+  subtitulo:
+    type: text
+    label: Subtítulo
+
+  descripcion:
+    type: textarea
+    label: Descripción
+
+  texto:
+    type: textarea
+    label: Texto
+
+  alerta:
+    type: textarea
+    label: Aviso importante
+
+  cita:
+    type: text
+    label: Cita o referencia
+
+  etiqueta:
+    type: text
+    label: Etiqueta superior
+
+  botonPrincipal:
+    type: text
+    label: Botón principal
+
+  botonSecundario:
+    type: text
+    label: Botón secundario
+
+  boton:
+    type: text
+    label: Texto del botón
+
+  imagenPrincipal:
+    type: image
+    label: Imagen principal
+    comment: Puedes subir una imagen nueva o escoger una imagen existente.
+
+  imagen:
+    type: image
+    label: Imagen
+    comment: Puedes subir una imagen nueva o escoger una imagen existente.
+
+  videoUrl:
+    type: url
+    label: Link de YouTube
+    comment: Pega aquí el link normal del video, por ejemplo un enlace de YouTube.
+
+  numero:
+    type: text
+    label: Número
+
+  nombre:
+    type: text
+    label: Nombre
+
+  anio:
+    type: text
+    label: Año
+
+  autor:
+    type: text
+    label: Autor o referencia
+
+  consigna:
+    type: text
+    label: Consigna
+
+  nota:
+    type: textarea
+    label: Nota de aplicación
+
+  pasos:
+    type: array
+    label: Pasos
+
+  path:
+    type: text
+    label: Ruta

@@ -1,0 +1,16 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520">
+  <rect width="900" height="520" fill="#111827"/>
+  <circle cx="450" cy="250" r="190" fill="#f8fafc" opacity=".06"/>
+  <g fill="#e2e8f0">
+    <path d="M450 110 C390 120 365 168 390 210 C330 205 285 240 295 295 C310 370 390 370 420 335 C430 390 450 420 450 420 Z"/>
+    <path d="M450 110 C510 120 535 168 510 210 C570 205 615 240 605 295 C590 370 510 370 480 335 C470 390 450 420 450 420 Z"/>
+  </g>
+  <g fill="#38bdf8" opacity=".7">
+    <circle cx="380" cy="250" r="32"/>
+    <circle cx="520" cy="250" r="32"/>
+    <circle cx="425" cy="185" r="18"/>
+    <circle cx="475" cy="185" r="18"/>
+  </g>
+  <text x="70" y="455" fill="#f8fafc" font-size="42" font-family="Arial" font-weight="700">Rorschach</text>
+  <text x="70" y="490" fill="#94a3b8" font-size="22" font-family="Arial">Estímulos ambiguos e interpretación proyectiva</text>
+</svg>
